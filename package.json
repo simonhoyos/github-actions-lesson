@@ -1,0 +1,8 @@
+{
+  "name": "github-actions-lesson",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:simonhoyos/github-actions-lesson.git",
+  "author": "Simon Hoyos <shmesa23@gmail.com> (https://www.linkedin.com/in/simonhoyos)",
+  "license": "MIT"
+}
