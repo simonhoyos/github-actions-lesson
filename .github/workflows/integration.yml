@@ -1,0 +1,32 @@
+name: Top Action Lesson
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  top_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '13'
+      - run: yarn install
+      - run: yarn test
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '13'
+      - run: yarn install
+      - run: yarn test:coverage
+      - uses: codecov/codecov-action@v1
+        with:
+          token: d9afdfed-15b8-4569-800b-af3b5e845c17
+          fail_ci_if_error: true

@@ -2,7 +2,15 @@
   "name": "github-actions-lesson",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest && codecov"
+  },
   "repository": "git@github.com:simonhoyos/github-actions-lesson.git",
   "author": "Simon Hoyos <shmesa23@gmail.com> (https://www.linkedin.com/in/simonhoyos)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "codecov": "^3.7.2",
+    "jest": "^26.4.2"
+  }
 }
